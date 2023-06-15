@@ -8,7 +8,7 @@ from .serializers import CommentSerializer, GroupSerializer, PostSerializer
 
 
 class PostViewSet(viewsets.ModelViewSet):
-    queryset = Post.objects.select_related('author')
+    queryset = Post.objects.select_related('author'
     serializer_class = PostSerializer
     permission_classes = [IsAuthenticated, AuthorOrReadOnly]
 
